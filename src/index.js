@@ -27,7 +27,7 @@ module.exports = ( log ) => {
 			app: expressApp,
 			router: ( route ) => {
 				const router = express.Router();
-				return ( route ? expressApp.use( route, router ) : expressApp.use( route, router ), router );
+				return ( route ? expressApp.use( route, router ) : expressApp.use( router ), router );
 			},
 			static: ( ...args ) => express.static( ...args ),
 		},
